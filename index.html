@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" class="tas-com">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Murali Natarajan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Development</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="lib/style.css" />
+    <script src="https://d3js.org/d3-color.v1.min.js"></script>
+    <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+</head>
+
+<body bgcolor="#fcfcfa">
+    <div id="header">
+        <h2>World Devlopment Metrics</h2>
+    </div>    
+    <div id="legend">
+        <div class="legend">
+            <p class="country-name"><input type="checkbox" id="europe" name="region" value="africa" checked><span class="key-dot europe"></span>Europe</p>
+        </div>
+        <div class="legend">
+            <p class="country-name"><input type="checkbox" id="africa" name="region" value="africa" checked><span class="key-dot africa"></span>Africa</p>
+        </div>
+        <div class="legend">
+            <p class="country-name"><input type="checkbox" id="southamerica" name="region" value="southamerica" checked><span class="key-dot southamerica"></span>South America</p>
+        </div>
+        <div class="legend">
+            <p class="country-name"><input type="checkbox" id="northamerica" name="region" value="northamerica" checked><span class="key-dot northamerica"></span>North America</p>
+        </div>
+        <div class="legend">
+            <p class="country-name"><input type="checkbox" id="centralamerica" name="region" value="centralamerica" checked><span class="key-dot centralamerica"></span>Central America</p>
+        </div>
+        <div class="legend">
+            <p class="country-name"><input type="checkbox" id="asia" name="region" value="asia" checked><span class="key-dot asia"></span>Asia</p>
+        </div>
+        <div class="legend">
+            <p class="country-name"><input type="checkbox" id="oceania" name="region" value="oceania" checked><span class="key-dot oceania"></span>Oceania</p>
+        </div>
+        <div id=c heckbox class="legend">
+            <input type="checkbox" id="labeldisplay">
+            <label for="labeldisplay">Country Labels</label>
+        </div>
+    </div>
+
+    <div class="row">
+            <div class="mainContent" id="area3">
+                <div id="tooltip">
+                    <div class="metric-year"></div>
+                    <div class="metric-country">
+                      Country : <span></span>
+                    </div>        
+                    <div class="metric-population">
+                      Population : <span></span>
+                    </div>
+                  </div>                
+            </div>
+            <div class="sidebarContent" id="area1"></div>
+            <div class="sidebarContent" id="area2"></div>
+    </div>
+
+    <div id=selectionc>
+        <div style="display: inline; float: left; padding-left: 4%; padding-bottom: 0%" class="button-bar">
+            <a id="play_button"><img src="./images/play.png" alt="pause" height="45" width="45"></a>
+            <a id="pause_button"><img src="./images/pause.png" alt="pause" height="45" width="45"></a>
+        </div>
+
+        <div id=slidecontainer style="float: left; padding-top: 0.5%; width: 60%; padding-left: 1%">
+            <input type="range" id="year" value="1900" min="1900" class="slider" max="2016" oninput="updateSlider(year.value)">
+        </div>
+        <div id=dropdown style="float: left; padding-left: 1.5%; text-align: center;">
+            <!-- <h2 style="margin:1px;">Select a year:</h2> -->
+            <label style="font-size: 1rem; padding-right: 2px;"><b>Select a year:</b></label>
+            <select name="yearpicker" id="yearpicker" onchange="selectYear.call(this, event)" style="width: 80px; height: 20px;"></select>
+        </div>
+        <div id=dropdown style="float: left; padding-left: 1.5%; text-align: center;">
+            <!-- <h2 style="margin:1px;">Select a Country:</h2> -->
+            <label style="font-size: 1rem; padding-right: 2px;"><b>Select a Country:</b></label>
+            <select name="countrypicker" id="countrypicker" onchange="selectCountry.call(this, event)" style="width: 140px ; height: 20px;"></select>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
+

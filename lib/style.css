@@ -1,0 +1,183 @@
+
+#header {
+color: rgb(7, 7, 7);
+padding: 5px;
+padding-bottom: 15px;
+text-align: center;
+}
+
+#header p {
+margin: 4px;
+}
+
+#header h2 {
+margin: 0;
+font-size: 1.4em;
+}  
+
+.axis path,
+.axis line {
+    fill: none;
+    shape-rendering: geometricPrecision;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+
+}
+
+
+#slidecontainer {
+    width: 100%;
+    /* Width of the outside container */
+}
+
+/* The slider itself */
+
+.slider {
+    -webkit-appearance: none;
+    /* Override default CSS styles */
+    appearance: none;
+    width: 60%;
+    /* Full-width */
+    height: 25px;
+    /* Specified height */
+    background: #d3d3d3;
+    /* Grey background */
+    outline: none;
+    /* Remove outline */
+    opacity: 0.7;
+    /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s;
+    /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+
+.slider:hover {
+    opacity: 1;
+    /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use webkit (Chrome, Opera, Safari, Edge) and moz (Firefox) to override default look) */
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    width: 25px;
+    /* Set a specific slider handle width */
+    height: 25px;
+    /* Slider handle height */
+    background: #4CAF50;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    /* Set a specific slider handle width */
+    height: 25px;
+    /* Slider handle height */
+    background: #4CAF50;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+}
+
+.bar:hover {
+    fill: brown;
+}
+
+/*HTML Horizonal Legend*/
+
+.country-name {
+    margin: 0 !important;
+}
+
+.key-dot {
+    display: inline-block;
+    height: 15px;
+    margin-right: .2em;
+    margin-left: .2em;
+    width: 15px;
+    padding-right: 2%;
+
+}
+
+/*Legend Country Colours*/
+
+.asia {
+    background: #7fc97f;
+}
+
+.northamerica {
+    background: #beaed4;
+}
+
+.europe {
+    background: #fdc086;
+}
+
+.southamerica {
+    background: #ffff99;
+}
+
+.centralamerica {
+    background: #f0027f;
+}
+
+.africa {
+    background: #386cb0;
+}
+
+.oceania {
+    background: #bf5b17;
+}
+
+#legend {
+    overflow: hidden;
+}
+
+.legend {
+    float: left;
+    margin-right: 0em;
+    margin-left: 1cm;
+}
+
+.axis {
+    font: 15px sans-serif;
+    shape-rendering: crispEdges;
+}
+
+/*Checkcox size*/
+
+input[type=checkbox] {
+    -webkit-transform: scale(1.2);
+
+}
+/*Positioning the bootstrap grids*/
+.mainContent {
+    float: left;
+    font-size: large;
+}
+
+.tick line {
+    opacity: 0.2;
+}
+
+#tooltip {
+    text-align: center;
+    border: 1px solid #ccc;
+    position: absolute;
+    padding: 10px;
+    background-color: #fff;
+    display: none;
+  }
+  
+  #tooltip .metric-date {
+    text-decoration: underline;
+  }
